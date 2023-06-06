@@ -1,61 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elektronik Ürün Kiralama Sitesi</title>
-    <link rel="stylesheet" href="style.css/style.css">
-    <script src="https://kit.fontawesome.com/d7f9046f82.js" crossorigin="anonymous"></script>
+<?php
+   include("inc/head.php");
+?>
 
-</head>
-<body>
+<?php
+   include("inc/login.php");
+?>
 
 
-
-    <!-- header section start-->
-    <header class="header">
-
-        <div id="menu-btn" class="fa-solid fa-bars-staggered">  
-        </div> 
-        <nav class="navbar">
-            <a href="index.html">Home </a>
-            <a href="">Product </a>
-            <a href="about.html">About </a>
-            <a href="communication.html">Communication</a>
-        </nav>
-      
-
-        
-  <div id="login-btn">
-            <button class="btn">login</button>
-            <i class="far fa-user"></i>
-        </div>
-    </header>
-    <!-- header section end--> 
-
-
-
-
-    <!-- login form start--> 
-    <div class="login-form-container">
-        <span class="fas fa-times" id="close-login-form"></span>
-    <form action="">
-        <h3>user login</h3>
-       <input type="email" placeholder="email" class="box">
-       <input type="password" placeholder="password" class="box">
-       <p>forget your password <a href="#">click here</a></p>
-       <input type="submit" value="login now" class="btn">
-       <p>or login with</p>
-       <div class="buttons">
-        <a href="#"class=btn>google</a>
-        <a href="#"class=btn>facebook</a>
-
-       </div>
-       <p>don't have an account <a href="#">create one </a></p>
-
-    </form></div>
-    <!-- login form end--> 
 
 
 
@@ -87,15 +38,6 @@
 <h3> MSI RAIDER GE78HX 13VH-038TR</h3>
 <div class="price">$75 <span>/Day</span>
 </div>
-<p>
-
-    <span class="fas fa-circle"></span>17 inç
-    <span class="fas fa-circle"></span> Ram 32 GB
-    <span class="fas fa-circle"></span>Nvidia GeForce RTX 4080
-    <span class="fas fa-circle"></span>Windows 11 Home
-    <span class="fas fa-circle"></span>Intel Core i7
-
-</p>
     </div>
 
     <div class="box-buttom">
@@ -262,49 +204,10 @@
 
 
 
+<?php
+include("inc/footer.php");
 
-
-<!-- footer section start-->
-<section class="footer">
-    <div class="search">
-        <input type="text" class="search-input" placeholder="Search"/>
-        <button class="btn btn-primary">search</button>
-
-    </div>
-    <div class="share">
-    <i class="fa-brands fa-facebook"></i>
-    <i class="fa-brands fa-twitter"></i>
-    <i class="fa-brands fa-instagram"></i>
-    <i class="fa-brands fa-whatsapp"></i>
-    <i class="fa-brands fa-linkedin"></i>
-    <i class="fa-brands fa-pinterest"></i>
-
-
-
-
-</div>
-
-<div class="links">
-    <a href="#" class="active">Anasayfa</a>
-    <a href="">Ürünler </a>
-    <a href="">Favoriler </a>
-    <a href="">İletişim </a>
-</div>
-<div class="credit">
-    created by <span>Halenur Sarışen </span> | all right reserved
-</div>
-</section>
-
-
-
-
-<!-- footer section end-->
-
-
-
-
-<!-- custom js link-->
-<script src="js/script.js"></script>
+?>
 
 </body>
 </html>

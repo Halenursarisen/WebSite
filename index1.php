@@ -1,22 +1,87 @@
-<?php
-   include("head.php");
-?>
 
 <?php
-   include("login.php");
+ 
+session_start();
+  
+
+if (!isset($_SESSION['username'])) {
+    $_SESSION['msg'] = "You have to log in first";
+    header('location: index.php');
+}
+
+if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['username']);
+    header("location: index.php");
+}
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style.css/.css">
+</head>
+<body>
+    <div class="header">
+    <div id="menu-btn" class="fa-solid fa-bars-staggered">  
+        </div> 
+        <nav class="navbar">
+            <a href="index1.php">Home </a>
+            <a href="products1.php">Product </a>
+            <a href="about1.php">About </a>
+            <a href="communication1.php">Communication</a>
+        </nav>
+    </div>
+    <div class="content">
+  
+       
+        <?php if (isset($_SESSION['success'])) : ?>
+            <div class="error success" >
+                <h3>
+                    <?php
+                        echo $_SESSION['success'];
+                        unset($_SESSION['success']);
+                    ?>
+                </h3>
+            </div>
+        <?php endif ?>
+  
+       
+        <?php  if (isset($_SESSION['username'])) : ?>
+             
+ 
+ 
+<p>
+                WELCOME!
+                <strong>
+                    <?php echo $_SESSION['username']; ?>
+                </strong>
+            </p>
+ 
+ 
+ 
+             
+ 
+ 
+<p>
+                <a href="index.php?logout='1'" style="color: red;">
+                    Click here to LOGOUT
+                </a>
+            </p>
+ 
+ 
+ 
+        <?php endif ?>
+    </div>
 
-
-
-
+    
 
     <!--home section start-->
-
- <section class="home" >
+    <section class="home" >
    <div class="content">
     <h2> THE MOST SUITABLE PRODUCTS YOU ARE LOOKING FOR ARE HERE</h2>
     <p> Instantly Access Every Electronic Device You Need</p>
-    <a href="products.php" class="btn">Discover Products</a>
+    <a href="products1.php" class="btn">Discover Products</a>
    </div>
  </section>
 
@@ -41,7 +106,7 @@
     </div>
 
     <div class="box-buttom">
-        <a href="giris-yap.php" class="btn"> add to cart</a>
+        <a href="#" class="btn"> add to cart</a>
 
     </div>
 </div>
@@ -56,7 +121,7 @@
     </div>
 
     <div class="box-buttom">
-        <a href="giris-yap.php" class="btn"> add to cart</a>
+        <a href="#" class="btn"> add to cart</a>
 
     </div>
 </div>
@@ -71,7 +136,7 @@
     </div>
 
     <div class="box-buttom">
-        <a href="giris-yap.php" class="btn"> add to cart</a>
+        <a href="#" class="btn"> add to cart</a>
 
     </div>
 </div>
@@ -97,7 +162,7 @@
         <h3>How did we start?</h3>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, doloremque!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, perspiciatis? Consequatur sapiente ducimus optio molestias officiis! Nulla quis animi consequuntur illo doloribus fugit. Odit provident deserunt dolor. Quia, nobis perspiciatis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita corrupti quas natus recusandae, officia iste! Delectus molestiae unde fuga assumenda quidem voluptates? Sapiente nisi, in repellat optio natus nostrum omnis.
         </p>
-        <a href="about.php" class="btn">Learn More..</a>
+        <a href="about1.php" class="btn">Learn More..</a>
     </div>
 </div>
 
@@ -167,7 +232,6 @@
 
 
 <!-- contact section start-->
-<!-- contact section start-->
 <section>
 
 <div class="contact">
@@ -202,8 +266,10 @@
 
 
 <!-- contact section end-->
+
+
 <?php
-include("footer.php");
+include("footer1.php");
 
 ?>
 

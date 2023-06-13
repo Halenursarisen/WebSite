@@ -1,11 +1,7 @@
 
 <!-- footer section start-->
 <section class="footer">
-    <div class="search">
-        <input type="text" class="search-input" placeholder="Search"/>
-        <button class="btn btn-primary">search</button>
-
-    </div>
+ 
     <div class="share">
     <i class="fa-brands fa-facebook"></i>
     <i class="fa-brands fa-twitter"></i>
@@ -23,7 +19,7 @@
     <a href="index.php" >Home</a>
     <a href="products.php">Product </a>
     <a href="about.php">About </a>
-    <a href="communication1.php">İletişim </a>
+    <a href="communication.php">İletişim </a>
 </div>
 <div class="credit">
     created by <span>Halenur Sarışen </span> | all right reserved

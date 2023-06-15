@@ -116,7 +116,7 @@ if (isset($_GET['logout'])) {
 
 
 <?php
-include("footer.php");
+include("footer1.php");
 
 ?>
 

@@ -69,7 +69,7 @@ input{
          <form action="islem.php" method="POST" >
             <div class="login-form">
                 <div class="control-group">
-                    <input type="text" name="username" class="login-field" placeholder="Kullanıcı Adı" id="login-name">
+                    <input type="text" name="username" class="login-field" placeholder="Email" id="login-name">
                        <label class="login-field-icon fui user" for="login-name"></label>
                 </div>
                 <div class="control-group">
